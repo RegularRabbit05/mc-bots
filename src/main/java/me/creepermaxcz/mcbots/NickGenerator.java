@@ -73,9 +73,11 @@ public class NickGenerator {
         }
         return result.toString();
     }
+
+    private static int nextIntegerValueIncreasing = 1;
     
     public String nextRandom() {
-        return prefix + generateRandom(nickLen);
+        return prefix + nextIntegerValueIncreasing++;
     }
 
     public String nextReal() {
